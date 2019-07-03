@@ -1,0 +1,16 @@
+<label>Server NAme</label>
+<!-- <input class="form-control" type="text" (input)="onEnterEvent($event)">  -->
+<input class="form-control" type="text" [(ngModel)]="servername"> 
+<p>{{servername}}</p>
+
+
+<button class="btn btnprimary" [disabled]="!allowNewServer" (click)="onServerCreated()">Add server</button>
+<p *ngIf="newservercreated; else noserver">{{ newServerStatus }}</p>
+<ng-template #noserver><p>Noe Server is Created</p></ng-template>
+<p [innerText]="allowNewServer"></p>
+<p [ngStyle]="{backgroundColor : getcolor()}" [ngClass]="{online : true}">server with ID {{ serverid }} and {{getServerStatus()}}</p>
+<button class="btn btnprimary" (click)="onToogleDeatils()">Displat Details</button>
+<p *ngIf="showSecret">Hai</p>
+<div *ngFor="let logItem of log; let i = index" 
+     [ngClass]="{'green-text': ontrue() }">{{logItem}}</div>
+     <!-- (i >=5),'green-text':!(i >=5) -->

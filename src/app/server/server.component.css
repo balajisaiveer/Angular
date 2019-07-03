@@ -1,0 +1,14 @@
+.online{
+    color: white;
+}
+.offline{
+    color:black;
+}
+.white-text{
+    color: white;
+    background-color: blue;
+}
+.green-text{
+    color: white;
+    background-color: green;
+}
