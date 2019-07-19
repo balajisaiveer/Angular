@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { OrderModule } from 'ngx-order-pipe';
 import { FilterPipeModule } from 'ngx-filter-pipe';
 import { FormsModule } from '@angular/forms';
-
+import {OnePieceModule} from './one-piece/one-piece.module';
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -52,9 +52,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatGridListModule,
     MatCheckboxModule,
     MatMenuModule,
-    MatTooltipModule
-
-
+    MatTooltipModule,
+    OnePieceModule
   ],
   bootstrap: [AppComponent]
 })

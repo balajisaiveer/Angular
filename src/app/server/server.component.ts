@@ -48,7 +48,6 @@ export class ServerComponent implements OnInit {
   getcolor() {
     if (this.serverstatus === 'offline') {
       return 'red';
-
     } else {
       return 'green';
     }
@@ -56,5 +55,9 @@ export class ServerComponent implements OnInit {
   onEnterEvent(event: any) {
     this.servername =   (<HTMLInputElement>event.target).value;
   }
-
+  withOutPipe() {
+    const val = this.serverid * 2; // any functionality
+    console.log('with out pipe function is running');
+    return val;
+  }
 }
